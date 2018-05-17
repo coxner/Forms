@@ -6,10 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        fieldset {
+            margin: 0;
+            padding: 0 0 .5em 0;
+            width: 100%;
+        }
+
+        label {
+            display: inline-block;
+            clear: both;
+            margin: .3em .3em 0 0;
+            /* right margin ensures label text wraps before touching input */
+            padding-bottom: .3em;
+            font-size: 1em;
+            float: left;
+            width: 6em;
+        }
+
+        input {
+            margin: .2em .5em .2em 0;
+            /* creates space around the text in the input */
+            padding: .2em .4em;
+            color: #000;
+            box-shadow: 1px 1px 3px #ccc;
+            font-size: .8em;
+            font-family: inherit;
+            /* for Firefox - uses Courier on textarea without this */
+            outline: none;
+            /* removes default blue focus outline */
+            border: 1px solid #bbb7ae;
+            border-radius: 3px;
+            float: left;
+            width: auto;
+            /* resets inherited width */
+            margin: .1em 0 0em .3em;
+        }
+    </style>
 </head>
 
 <body>
-    <form class="myForm" action="send-to-database.js" method="post"></form>
+    <form class="myForm" action="send-to-database.js" method="post">
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="name">Full Name
+                <input type="text" id="name" name="name">
+            </label>
+            <label for="email">Email
+                <input type="email">
+            </label>
+            <label for="address">
+                <input type="text">
+            </label>
+        </fieldset>
+
+
+
+
+    </form>
 </body>
 
 </html>
